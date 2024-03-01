@@ -1,0 +1,112 @@
+.footer {
+	display: flex;
+	align-items: center;
+  background: slategray;
+	text-align: left;
+	font-size: 14px;
+  color: white;
+  font-family: 'Poppins';
+  display: 'inline-block';
+	p {
+		margin: 0;
+		color: #000;
+	}
+	a {
+		font-weight: normal;
+	}
+}
+
+.footerRow{
+  margin-left: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+  width: 100%;
+  font-size: 16px;
+}
+
+.navbar{
+  display: flex;
+  background-color:crimson;
+}
+
+.container{
+  min-height: 85vh;
+  font-family: 'Poppins';
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hero{
+  width: 100%;
+  padding: 7rem;
+  color: black;
+  font-family: 'Poppins';
+  text-align: center;
+  align-items: center;
+}
+
+.hero2{
+  color: black;
+  padding: 7rem;
+  padding-top: 15rem;
+  min-height: 92vh;
+  font-family: 'Poppins';
+  text-align: left;
+  align-items: center;
+}
+
+.herotext{
+  display:inline-block;
+  white-space:pre-wrap;
+  font-size: 24px;
+  background-color:white;
+  padding: 5px;
+  padding-left:0px;
+  box-shadow: -8px 0 0 #fff;
+}
+
+.herotitle{
+  font-size: 48px;
+  font-weight: bold;
+  display:inline-block;
+  white-space:pre-wrap;
+  background-color:white;
+  padding: 5px;
+  padding-left:0px;
+  box-shadow: -8px 0 0 #fff;
+}
+
+.image{
+  border-radius: 12px;
+}
+
+.galleryCol{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.menusubsection{
+  margin-bottom: 1rem;
+}
+
+.buttonStyle{
+  background-color: LIGHTSTEELBLUE;
+  border-color: LIGHTSTEELBLUE;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.buttonStyle:hover{
+  background-color: LIGHTSTEELBLUE;
+  border-color: LIGHTSTEELBLUE;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.buttonStyle:target{
+  background-color: LIGHTSTEELBLUE;
+  border-color: LIGHTSTEELBLUE;
+  color: black;
+  margin-bottom: 1rem;
+}

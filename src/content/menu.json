@@ -1,0 +1,101 @@
+{
+  "title": "Menu",
+  "content": [
+    {
+      "item": "(Subject to Availablity)"
+    },
+    {
+      "item": "Donuts: "
+    },
+    {
+      "item": "Glazed Donut: $0.90"
+    },
+    {
+      "item": "Half Dozen Glazed: $5.40"
+    },
+    {
+      "item": "Dozen Glazed: $8.00"
+    },
+    {
+      "item": "Iced or Filled Donut: $0.90"
+    },
+    {
+      "item": "Half Dozen Mixed: $5.40"
+    },
+    {
+      "item": "Dozen Mixed: $8.00"
+    },
+    {
+      "item": "(Iced: White, Coconut, Maple, Strawberry, Chocolate, Cherry, Cinnamon Sugar, Sugar)"
+    },
+    {
+      "item": "(Filled: Lemon, Strawberry, Apple, Chocolate, Cream, Bavarian Cream)"
+    },
+    {
+      "item": "Assorted: $1.52"
+    },
+    {
+      "item": "(Cinnamon Twist, Bear Claw, Apple Fritter, Eclair)"
+    },
+    {
+      "item": "Half Dozen Donut Holes: $0.75"
+    },
+    {
+      "item": "Dozen Donut Holes: $1.50"
+    },
+    {
+      "item": "Kolaches: "
+    },
+    {
+      "item": "Regular Sausage Kolache: $2.00"
+    },
+    {
+      "item": "Half Dozen Regular Sausage Kolache: $12.00"
+    },
+    {
+      "item": "Dozen Regular Sausage Kolache: $19.43"
+    },
+    {
+      "item": "(Sausage, Sausage and Cheese, Ham and Cheese)"
+    },
+    {
+      "item": "Prasek's Sausage Kolache: $2.76"
+    },
+    {
+      "item": "Dozen Prasek's Sausage Kolache: $27.01"
+    },
+    {
+      "item": "(Sausage, Jalapeno Sausage)"
+    },
+    {
+      "item": "Drinks:"
+    },
+    {
+      "item": "Soda (Coke, Diet Coke, Dr. Pepper, Diet Dr. Pepper, Sprite, Big Red): $1.35"
+    },
+    {
+      "item": "Milk (Regular, Chocolate): $2.25"
+    },
+    {
+      "item": "Juice Box (Apple, Fruit Punch): $1.00"
+    },
+    {
+      "item": "Orange Juice: $2.25"
+    },
+    {
+      "item": "Monster: $3.00"
+    },
+    {
+      "item": "Starbucks Frappiccino (Vanilla, Mocha): $2.50"
+    },
+    {
+      "item": "Small Coffee: $1.00"
+    },
+    {
+      "item": "Medium Coffee: $1.50"
+    },
+    {
+      "item": "Large Coffee: $2.00"
+    }
+  ]
+}
