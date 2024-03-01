@@ -35,65 +35,40 @@ export default function Home({ data }) {
         </Alert>
       );
   }
-  var v1=(
-    <div>
-      <NavBar/>
-      
-      <div className="container">
-        {alertCode}
-        <div style={{marginTop: '28px', marginBottom: '30px', textAlign: 'center'}}>
-          <h3>{json.content[4].item}</h3>
-          <h3>{json.content[5].item}</h3>
-        </div>
-        <Row>
-          <Col lg={6} style={{marginBottom: '10px'}}>
-            <Img
-              fluid={data.iced.childImageSharp.fluid}
-              alt="Chocolate iced donuts"
-              className="image"
-            />
-          </Col>
-          <Col lg={6} style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '10px'}}>
-            <Link  to="/menu" style={linkStyles}><Button style={{backgroundColor:'LIGHTSTEELBLUE', borderColor:'LIGHTSTEELBLUE', }}>{json.content[2].item}<BsChevronRight/></Button></Link>
-          </Col>
-        </Row>
-      </div>
-      <Footer/>
-    </div>
-  );
-
-  var v2=(
-    <div>
-      <NavBar/>
-      
-      <div className="container">
-        {alertCode}
-        <div style={{marginTop: '3rem', marginBottom: '3rem', textAlign: 'center'}}>
-          <h3>{json.content[4].item}</h3>
-          <h3>{json.content[5].item}</h3>
-        </div>
-        <Row>
-          <Col lg={6} style={{marginBottom: '2rem'}}>
-            <Img
-              fluid={data.iced.childImageSharp.fluid}
-              alt="Chocolate iced donuts"
-              className="image"
-            />
-          </Col>
-          <Col lg={6} style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '2rem'}}>
-            <Button style={{backgroundColor:'LIGHTSTEELBLUE', borderColor:'LIGHTSTEELBLUE', }}><Link  to="/menu" style={linkStyles}>{json.content[2].item}<BsChevronRight/></Link></Button>
-          </Col>
-        </Row>
-      </div>
-      <Footer/>
-    </div>
-  );
+  console.log(data.glazed)
   return (
     <div>
       <Helmet>
         <title>Charlie's Donuts</title>
       </Helmet>
-      {v2}
+      <div>
+        <NavBar/>
+        <div >
+          <Img fluid={data.glazed.childImageSharp.fluid} alt="donuts" className="image"/>
+          <div style={{fontSize: '48px', fontWeight:'bold'}}>{json.content[0].item}</div>
+          <div style={{fontSize: '24px'}}>{json.content[1].item}</div>
+        </div>
+        <div className="container">
+          {alertCode}
+          <div style={{marginTop: '3rem', marginBottom: '3rem', textAlign: 'center'}}>
+            <h3>{json.content[4].item}</h3>
+            <h3>{json.content[5].item}</h3>
+          </div>
+          <Row>
+            <Col lg={6} style={{marginBottom: '2rem'}}>
+              <Img
+                fluid={data.iced.childImageSharp.fluid}
+                alt="Chocolate iced donuts"
+                className="image"
+              />
+            </Col>
+            <Col lg={6} style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '2rem'}}>
+              <Button style={{backgroundColor:'LIGHTSTEELBLUE', borderColor:'LIGHTSTEELBLUE', }}><Link  to="/menu" style={linkStyles}>{json.content[2].item}<BsChevronRight/></Link></Button>
+            </Col>
+          </Row>
+        </div>
+        <Footer/>
+      </div>
     </div>
   );
 }
@@ -114,7 +89,7 @@ export const query = graphql`
         }
       }
     }
-    glazed:file(relativePath: { eq: "IMG_8733_copy.jpg" }) {
+    glazed:file(relativePath: { eq: "IMG_8733copy.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

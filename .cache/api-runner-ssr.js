@@ -3,9 +3,9 @@ var plugins = [{
       plugin: require('/Users/zoeng/git/charlies-donuts-v2/node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js'),
       options: {"plugins":[]},
     },{
-      name: 'gatsby-plugin-prefetch-google-fonts',
-      plugin: require('/Users/zoeng/git/charlies-donuts-v2/node_modules/gatsby-plugin-prefetch-google-fonts/gatsby-ssr.js'),
-      options: {"plugins":[],"fonts":[{"family":"Poppins","variants":["400","700"]}]},
+      name: 'gatsby-plugin-google-fonts',
+      plugin: require('/Users/zoeng/git/charlies-donuts-v2/node_modules/gatsby-plugin-google-fonts/gatsby-ssr.js'),
+      options: {"plugins":[],"fonts":["poppins:400,700"]},
     },{
       name: 'gatsby-plugin-manifest',
       plugin: require('/Users/zoeng/git/charlies-donuts-v2/node_modules/gatsby-plugin-manifest/gatsby-ssr.js'),
