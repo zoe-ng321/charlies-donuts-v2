@@ -1,7 +1,7 @@
 import React from "react"
 import NavBar from '../components/navbar.js'
 import Footer from '../components/footer.js'
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import json from '../content/about.json'
 import { graphql } from 'gatsby'
 
@@ -11,11 +11,10 @@ export default function About({data}) {
       <NavBar/>
       <div className="container">
         <h1>{json.title}</h1>
-        <Img
-          fluid={data.shop.childImageSharp.fluid}
+        <GatsbyImage
+          image={data.shop.childImageSharp.gatsbyImageData}
           alt="Menu sign"
-          className="image"
-        />
+          className="image" />
         <div style={{marginTop: '2rem', fontSize: '18px', marginBottom:'3rem'}}>
           <p>{json.content[0].item}</p>
           <p>{json.content[1].item}</p>
@@ -26,14 +25,10 @@ export default function About({data}) {
   );
 }
 
-export const query = graphql`
-  query MyQueryAbout {
-    shop:file(relativePath: { eq: "IMG_8734.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const query = graphql`query MyQueryAbout {
+  shop: file(relativePath: {eq: "IMG_8734.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
-`
+}`
