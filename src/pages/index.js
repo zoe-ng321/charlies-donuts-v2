@@ -35,7 +35,6 @@ export default function Home({ data }) {
         </Alert>
       );
   }
-  console.log(data.glazed)
   return (
     <div>
       <Helmet>
