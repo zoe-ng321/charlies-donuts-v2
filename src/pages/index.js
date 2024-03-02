@@ -43,11 +43,7 @@ export default function Home({ data }) {
       </Helmet>
       <div>
         <NavBar/>
-        <div >
-          <Img fluid={data.glazed.childImageSharp.fluid} alt="donuts" className="image"/>
-          <div style={{fontSize: '48px', fontWeight:'bold'}}>{json.content[0].item}</div>
-          <div style={{fontSize: '24px'}}>{json.content[1].item}</div>
-        </div>
+        
         <div className="container">
           {alertCode}
           <div style={{marginTop: '3rem', marginBottom: '3rem', textAlign: 'center'}}>

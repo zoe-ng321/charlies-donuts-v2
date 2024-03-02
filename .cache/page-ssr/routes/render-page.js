@@ -370,6 +370,7 @@ function getForwards(collectedScripts) {
 
 exports.components = {
   "component---cache-dev-404-page-js": () => __webpack_require__.e(/*! import() | component---cache-dev-404-page-js */ "component---cache-dev-404-page-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../dev-404-page.js?export=default */ "./.cache/dev-404-page.js?export=default")),
+  "component---src-pages-404-js": () => __webpack_require__.e(/*! import() | component---src-pages-404-js */ "component---src-pages-404-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/404.js?export=default */ "./src/pages/404.js?export=default")),
   "component---src-pages-about-js": () => __webpack_require__.e(/*! import() | component---src-pages-about-js */ "component---src-pages-about-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/about.js?export=default */ "./src/pages/about.js?export=default")),
   "component---src-pages-contact-js": () => __webpack_require__.e(/*! import() | component---src-pages-contact-js */ "component---src-pages-contact-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/contact.js?export=default */ "./src/pages/contact.js?export=default")),
   "component---src-pages-gallery-js": () => __webpack_require__.e(/*! import() | component---src-pages-gallery-js */ "component---src-pages-gallery-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/gallery.js?export=default */ "./src/pages/gallery.js?export=default")),

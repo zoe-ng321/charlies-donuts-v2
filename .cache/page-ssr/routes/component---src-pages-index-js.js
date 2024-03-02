@@ -3800,7 +3800,7 @@ function Home({
       href: "https://www.cdc.gov/coronavirus/2019-nCoV/index.html"
     }, "here!")));
   }
-  console.log(data);
+  console.log(data.glazed);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_helmet__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Charlie's Donuts")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_navbar_js__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby_image__WEBPACK_IMPORTED_MODULE_7__["default"], {
     fluid: data.glazed.childImageSharp.fluid,
     alt: "donuts",
@@ -3849,7 +3849,7 @@ function Home({
     style: linkStyles
   }, _content_home_json__WEBPACK_IMPORTED_MODULE_8__.content[2].item, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_bs__WEBPACK_IMPORTED_MODULE_13__.BsChevronRight, null)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_footer_js__WEBPACK_IMPORTED_MODULE_5__["default"], null)));
 }
-const query = "354202215";
+const query = "4153861274";
 
 /***/ }),
 
