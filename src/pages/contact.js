@@ -2,9 +2,6 @@ import React from "react"
 import NavBar from '../components/navbar.js'
 import Footer from '../components/footer.js'
 import json from '../content/contact.json'
-import Button from 'react-bootstrap/Button'
-import {BsChevronRight} from 'react-icons/bs'
-import Img from "gatsby-image"
 import { GoogleMap, LoadScript, Marker, InfoBox } from '@react-google-maps/api';
 
 export default function Contact({data}) {

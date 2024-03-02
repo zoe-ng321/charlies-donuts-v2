@@ -9,7 +9,7 @@ import Alert from 'react-bootstrap/Alert'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import json from '../content/home.json'
 import {BsChevronRight} from 'react-icons/bs'
 
@@ -42,11 +42,32 @@ export default function Home({ data }) {
       </Helmet>
       <div>
         <NavBar/>
-        <div >
-          <Img fluid={data.glazed.childImageSharp.fluid} alt="donuts" className="image"/>
-          <div style={{fontSize: '48px', fontWeight:'bold'}}>{json.content[0].item}</div>
-          <div style={{fontSize: '24px'}}>{json.content[1].item}</div>
-        </div>
+        <div style={{ display: "grid" }}>
+      <GatsbyImage
+        style={{
+          gridArea: "1/1",
+        }}
+        layout="fullWidth"
+        aspectratio={3 / 1}
+        alt=""
+        image={data.glazed.childImageSharp.gatsbyImageData}
+        formats={["auto", "webp", "avif"]}
+      />
+      <div
+        style={{
+          gridArea: "1/1",
+          position: "relative",
+          justifyContent: "center",
+          alignItems: "start",
+          display: "flex",
+          flexDirection: "column",
+          marginLeft: "50px"
+        }}
+      >
+        <div className="herotitle">{json.content[0].item}</div>
+        <div className="herotext">{json.content[1].item}</div>
+      </div>
+    </div>
         <div className="container">
           {alertCode}
           <div style={{marginTop: '3rem', marginBottom: '3rem', textAlign: 'center'}}>
@@ -55,11 +76,10 @@ export default function Home({ data }) {
           </div>
           <Row>
             <Col lg={6} style={{marginBottom: '2rem'}}>
-              <Img
-                fluid={data.iced.childImageSharp.fluid}
+              <GatsbyImage
+                image={data.iced.childImageSharp.gatsbyImageData}
                 alt="Chocolate iced donuts"
-                className="image"
-              />
+                className="image" />
             </Col>
             <Col lg={6} style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '2rem'}}>
               <Button style={{backgroundColor:'LIGHTSTEELBLUE', borderColor:'LIGHTSTEELBLUE', }}><Link  to="/menu" style={linkStyles}>{json.content[2].item}<BsChevronRight/></Link></Button>
@@ -72,28 +92,20 @@ export default function Home({ data }) {
   );
 }
 
-export const query = graphql`
-  query MyQuery {
-    donut:file(relativePath: { eq: "image1.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    iced:file(relativePath: { eq: "IMG_8735.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    glazed:file(relativePath: { eq: "IMG_8733copy.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const query = graphql`query MyQuery {
+  donut: file(relativePath: {eq: "image1.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
-`
+  iced: file(relativePath: {eq: "IMG_8735.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(layout: FULL_WIDTH)
+    }
+  }
+  glazed: file(relativePath: {eq: "IMG_8733copy.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(layout: FULL_WIDTH)
+    }
+  }
+}`
