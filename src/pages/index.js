@@ -5,16 +5,16 @@ import '../assets/index.css';
 import NavBar from '../components/navbar.js'
 import Footer from '../components/footer.js'
 import { graphql, Link } from "gatsby"
-import Alert from 'react-bootstrap/Alert'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import { GatsbyImage } from "gatsby-plugin-image";
 import json from '../content/home.json'
 import {BsChevronRight} from 'react-icons/bs'
 
 export default function Home({ data }) {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const linkStyles = {
     color: 'black',
     display: 'inline-block',
@@ -24,17 +24,8 @@ export default function Home({ data }) {
     fontFamily: 'Poppins',
     fontSize: '30px'
   };
+  const handleClose = () => setShow(false);
 
-  var alertCode = ''
-  if (show) {
-      alertCode = (
-        <Alert variant="warning" onClose={() => setShow(false)} style={{marginTop:'1rem'}}>
-          <p>
-          {json.content[3].item} <a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html">here!</a>
-          </p>
-        </Alert>
-      );
-  }
   return (
     <div>
       <Helmet>
@@ -69,7 +60,17 @@ export default function Home({ data }) {
       </div>
     </div>
         <div className="container">
-          {alertCode}
+          <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title>Thank you!</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>{json.content[3].item}</Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleClose}>
+                Close
+              </Button>
+            </Modal.Footer>
+          </Modal>
           <div style={{marginTop: '3rem', marginBottom: '3rem', textAlign: 'center'}}>
             <h3>{json.content[4].item}</h3>
             <h3>{json.content[5].item}</h3>
